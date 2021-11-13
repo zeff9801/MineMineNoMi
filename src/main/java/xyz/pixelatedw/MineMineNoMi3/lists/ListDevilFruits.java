@@ -161,7 +161,7 @@ public class ListDevilFruits
 		addITEM(MeroMeroNoMi, "Mero Mero no Mi");
 		SupaSupaNoMi = new AkumaNoMi(EnumFruitType.PARAMECIA, SupaAbilities.abilitiesArray);
 		addITEM(SupaSupaNoMi, "Supa Supa no Mi");
-		HitoHitoNoMi = new AkumaNoMi(EnumFruitType.ZOAN, new Ability[] {});
+		HitoHitoNoMi = new AkumaNoMi(EnumFruitType.ZOAN);
 		addITEM(HitoHitoNoMi, "Hito Hito no Mi");
 		SabiSabiNoMi = new AkumaNoMi(EnumFruitType.PARAMECIA, SabiAbilities.abilitiesArray);
 		addITEM(SabiSabiNoMi, "Sabi Sabi no Mi");
@@ -232,12 +232,10 @@ public class ListDevilFruits
 		MeraMeraNoMi = new AkumaNoMi(EnumFruitType.LOGIA, MeraAbilities.abilitiesArray);
 		addITEM(MeraMeraNoMi, "Mera Mera no Mi");
 
-		for (int i = 0; i < EVERY_FRUIT.length; i++)
-		{		
+		for (Ability[] abilities : EVERY_FRUIT) {
 			totalFruits++;
-			for (Ability a : EVERY_FRUIT[i])
-				if (a != null)
-				{
+			for (Ability a : abilities)
+				if (a != null) {
 					totalAbilities++;
 					AbilityManager.instance().registerAbility(a);
 				}

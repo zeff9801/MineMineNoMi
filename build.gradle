@@ -36,7 +36,7 @@ minecraft {
 
 
 dependencies {
-	compile name: 'CustomNPCs_1.7.10d(29oct17)'
+	//compile name: 'CustomNPCs_1.7.10d(29oct17)'
 }
 
 processResources {

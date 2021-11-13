@@ -111,18 +111,24 @@ public class QuestSwordsmanProgression01 extends Quest implements IInteractQuest
 		
 		if(heldItem != null && (heldItem.getItem() instanceof ItemSword || heldItem.getItem() instanceof ItemCoreWeapon))
 		{
+			Iterator iterator = heldItem.getAttributeModifiers().entries().iterator();
 
-			for (Object o : heldItem.getAttributeModifiers().entries()) {
-				Entry entry = (Entry) o;
-
-				if (entry.getKey().equals(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName())) {
-					AttributeModifier attrmodif = (AttributeModifier) entry.getValue();
+			while (iterator.hasNext())
+			{
+				Entry entry = (Entry)iterator.next();
+				
+				if(entry.getKey().equals(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName()))
+				{
+					AttributeModifier attrmodif = (AttributeModifier)entry.getValue();
 					double damage = attrmodif.getAmount();
-
-					if (damage >= 7) {
-						return true;
-					} else {
-						WyHelper.sendMsgToPlayer(player, "<Swordsman Master> That sword of yours is way too weak, you won't get anywhere with that excuse of a sword.");
+					
+					if(damage >= 7)
+					{
+						return true;						
+					}
+					else
+					{
+						WyHelper.sendMsgToPlayer(player, "<Swordsman Master> That sword of yours is way too weak, you won't get anywhere with that excuse of a sword.");	
 						return false;
 					}
 				}
