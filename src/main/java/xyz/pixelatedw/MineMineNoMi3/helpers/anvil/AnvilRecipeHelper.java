@@ -1,11 +1,11 @@
 package xyz.pixelatedw.MineMineNoMi3.helpers.anvil;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.item.ItemStack;
 import xyz.pixelatedw.MineMineNoMi3.helpers.anvil.AnvilRecipe.AnvilRecipeType;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AnvilRecipeHelper
 {

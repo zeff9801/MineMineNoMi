@@ -1,9 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.models.entities.zoans;
 
-import java.util.Arrays;
-import java.util.Random;
-
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;

@@ -1,16 +1,13 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.tasks;
 
-import java.util.TimerTask;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.EntityFX;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.MainMod;
 import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
+
+import java.util.TimerTask;
 
 public class ParticleTaskSparks extends TimerTask
 {

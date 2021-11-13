@@ -1,11 +1,8 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.common;
 
 import net.minecraft.entity.player.EntityPlayer;
-import xyz.pixelatedw.MineMineNoMi3.ID;
-import xyz.pixelatedw.MineMineNoMi3.MainMod;
 import xyz.pixelatedw.MineMineNoMi3.api.EnumParticleTypes;
 import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
-import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.ParticleEffect;
 
 public class ParticleEffectWaterExplosion extends ParticleEffect
@@ -20,7 +17,7 @@ public class ParticleEffectWaterExplosion extends ParticleEffect
 	        double motionZ = WyMathHelper.randomWithRange(-5, 5) + player.worldObj.rand.nextDouble();
 	        
             double middlePoint = 0.25;
-            middlePoint *= (double)(player.worldObj.rand.nextFloat() * player.worldObj.rand.nextFloat() + 0.3F);
+            middlePoint *= player.worldObj.rand.nextFloat() * player.worldObj.rand.nextFloat() + 0.3F;
 	        
 	        motionX *= middlePoint / 2;
 	        motionY *= middlePoint / 2;

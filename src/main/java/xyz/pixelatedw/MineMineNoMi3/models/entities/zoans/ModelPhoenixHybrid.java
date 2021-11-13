@@ -1,14 +1,9 @@
 package xyz.pixelatedw.MineMineNoMi3.models.entities.zoans;
 
-import org.lwjgl.opengl.GL11;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.MathHelper;
-import xyz.pixelatedw.MineMineNoMi3.api.WyRenderHelper;
 
 public class ModelPhoenixHybrid extends ModelZoanMorph
 {

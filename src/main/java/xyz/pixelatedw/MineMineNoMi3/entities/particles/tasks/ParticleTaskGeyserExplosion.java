@@ -1,9 +1,8 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.tasks;
 
-import java.util.TimerTask;
-
 import net.minecraft.entity.EntityLivingBase;
-import xyz.pixelatedw.MineMineNoMi3.MainMod;
+
+import java.util.TimerTask;
 
 /** TODO Fully implement this effect */
 public class ParticleTaskGeyserExplosion extends TimerTask

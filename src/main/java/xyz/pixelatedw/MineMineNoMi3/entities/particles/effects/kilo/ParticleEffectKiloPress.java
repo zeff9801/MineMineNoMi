@@ -1,12 +1,12 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.kilo;
 
-import java.util.Timer;
-
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.api.EnumParticleTypes;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.ParticleEffect;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.tasks.ParticleTaskWave;
+
+import java.util.Timer;
 
 public class ParticleEffectKiloPress extends ParticleEffect
 {

@@ -1,9 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.sniper;
 
-import java.util.Random;
-
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.api.EnumParticleTypes;
 import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;

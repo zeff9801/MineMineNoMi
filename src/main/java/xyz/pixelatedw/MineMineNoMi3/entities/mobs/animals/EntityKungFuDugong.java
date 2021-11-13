@@ -1,19 +1,9 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.mobs.animals;
 
-import java.util.Arrays;
-import java.util.Optional;
-import java.util.UUID;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IEntityOwnable;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIAttackOnCollide;
-import net.minecraft.entity.ai.EntityAIHurtByTarget;
-import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
-import net.minecraft.entity.ai.EntityAIOpenDoor;
-import net.minecraft.entity.ai.EntityAISwimming;
-import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.ai.*;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.monster.EntityMob;
@@ -32,6 +22,10 @@ import xyz.pixelatedw.MineMineNoMi3.api.network.WyNetworkHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.mobs.INBTEntity;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketEntityNBTSync;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
+
+import java.util.Arrays;
+import java.util.Optional;
+import java.util.UUID;
 
 public class EntityKungFuDugong extends EntityMob implements INBTEntity, IEntityOwnable
 {

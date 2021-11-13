@@ -1,7 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles;
 
-import java.util.HashMap;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.ID;
@@ -43,12 +41,7 @@ import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.pika.ParticleEffe
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.rokushiki.ParticleEffectGeppo;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.sabi.ParticleEffectRustTouch;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.sniper.ParticleEffectKemuriBoshi;
-import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.suna.ParticleEffectDesertEncierro;
-import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.suna.ParticleEffectDesertGirasole;
-import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.suna.ParticleEffectDesertGirasole2;
-import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.suna.ParticleEffectDesertSpada;
-import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.suna.ParticleEffectGroundDeath;
-import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.suna.ParticleEffectSables;
+import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.suna.*;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.supa.ParticleEffectAtomicSpurt;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.toriphoenix.ParticleEffectBlueFlames;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.toriphoenix.ParticleEffectTenseiNoSoen;
@@ -63,6 +56,8 @@ import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.yomi.ParticleEffe
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.yuki.ParticleEffectFubuki;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.zou.ParticleEffectGreatStomp;
 
+import java.util.HashMap;
+
 public class ParticleManager
 {
 
@@ -76,7 +71,7 @@ public class ParticleManager
 		return instance;
 	}
 	
-	private HashMap<String, ParticleEffect> particleEffects = createMap();
+	private final HashMap<String, ParticleEffect> particleEffects = createMap();
 	
 	private HashMap<String, ParticleEffect> createMap()
 	{

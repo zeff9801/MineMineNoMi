@@ -1,8 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.helpers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemStack;
@@ -10,6 +7,9 @@ import xyz.pixelatedw.MineMineNoMi3.Values;
 import xyz.pixelatedw.MineMineNoMi3.api.quests.Quest;
 import xyz.pixelatedw.MineMineNoMi3.api.quests.QuestProperties;
 import xyz.pixelatedw.MineMineNoMi3.quests.ITimedQuest;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuestLogicHelper
 {

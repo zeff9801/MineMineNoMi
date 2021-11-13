@@ -1,8 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.MovingObjectPosition;
@@ -13,6 +10,9 @@ import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityAttribute;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityProjectile;
 import xyz.pixelatedw.MineMineNoMi3.helpers.DevilFruitsHelper;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class MaguProjectiles 
 {
@@ -43,9 +43,9 @@ public class MaguProjectiles
 		{
 			if(hit.entityHit != null)
 				hit.entityHit.setFire(200);
-		};
-		
-		@Override
+		}
+
+        @Override
 		public void onUpdate()
 		{	
 			for (int i = 0; i < DevilFruitsHelper.getParticleSettingModifier(20); i++)
@@ -81,9 +81,9 @@ public class MaguProjectiles
 			
 			if(MainConfig.enableGriefing)
 				DevilFruitsHelper.placeBlockIfAllowed(worldObj, hit.blockX, hit.blockY, hit.blockZ, Blocks.flowing_lava, "core", "foliage");
-		};
-		
-		@Override
+		}
+
+        @Override
 		public void onUpdate()
 		{	
 			for (int i = 0; i < DevilFruitsHelper.getParticleSettingModifier(13); i++)

@@ -1,8 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.MovingObjectPosition;
@@ -16,6 +13,9 @@ import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityProjectile;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
 import xyz.pixelatedw.MineMineNoMi3.helpers.DevilFruitsHelper;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class MeraProjectiles
 {
@@ -32,7 +32,7 @@ public class MeraProjectiles
 	
 	public static class Hiken extends AbilityProjectile
 	{
-		private Random r = new Random();
+		private final Random r = new Random();
 		
 		public Hiken(World world)
 		{super(world);}
@@ -203,8 +203,8 @@ public class MeraProjectiles
 				hit.entityHit.setFire(this.ticks);
 
 			this.worldObj.setBlock((int)this.posX, (int)this.posY, (int)this.posZ, Blocks.fire);
-		};
-		
+		}
+
 		@Override
 		public void onUpdate()
 		{	
@@ -268,7 +268,7 @@ public class MeraProjectiles
 							this.worldObj.setBlock((int)this.posX, (int)this.posY + j, (int)this.posZ + i, Blocks.fire);
 				}
 			}
-		};
+		}
 	}
 }
 

@@ -1,11 +1,11 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.fishkarate;
 
-import java.util.Timer;
-
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.api.EnumParticleTypes;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.ParticleEffect;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.tasks.ParticleTaskSphere;
+
+import java.util.Timer;
 
 public class ParticleEffectSamehada extends ParticleEffect
 {

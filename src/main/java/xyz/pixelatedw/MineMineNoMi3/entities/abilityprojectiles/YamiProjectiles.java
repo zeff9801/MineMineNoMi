@@ -1,10 +1,7 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
-import java.util.ArrayList;
-
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
@@ -19,6 +16,8 @@ import xyz.pixelatedw.MineMineNoMi3.lists.ListExtraAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
 
+import java.util.ArrayList;
+
 public class YamiProjectiles 
 {
 	public static ArrayList<Object[]> abilitiesClassesArray = new ArrayList();
@@ -31,7 +30,7 @@ public class YamiProjectiles
 	
 	public static class Liberation extends AbilityProjectile
 	{
-		private Block[] randomBlocks = new Block[] {Blocks.stone, Blocks.sand, Blocks.grass, Blocks.dirt, Blocks.gravel, Blocks.clay, Blocks.cobblestone};
+		private final Block[] randomBlocks = new Block[] {Blocks.stone, Blocks.sand, Blocks.grass, Blocks.dirt, Blocks.gravel, Blocks.clay, Blocks.cobblestone};
 		
 		public Liberation(World world)
 		{super(world);}

@@ -1,7 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.mobs.ai.abilities;
 
-import java.util.UUID;
-
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
@@ -11,6 +9,8 @@ import xyz.pixelatedw.MineMineNoMi3.api.network.WyNetworkHelper;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedEntityData;
 import xyz.pixelatedw.MineMineNoMi3.entities.mobs.EntityNewMob;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketSyncInfo;
+
+import java.util.UUID;
 
 public class EntityAIHakiCombat extends EntityAIBase
 {

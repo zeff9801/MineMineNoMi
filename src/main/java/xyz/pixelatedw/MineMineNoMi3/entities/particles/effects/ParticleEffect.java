@@ -1,7 +1,6 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.world.World;
 
 public abstract class ParticleEffect
 {

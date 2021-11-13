@@ -1,14 +1,7 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
-import java.util.ArrayList;
-import java.util.Random;
-
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Blocks;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.MovingObjectPosition;
@@ -28,6 +21,9 @@ import xyz.pixelatedw.MineMineNoMi3.helpers.DevilFruitsHelper;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class DokuProjectiles 
 {
@@ -76,7 +72,7 @@ public class DokuProjectiles
 				}
 				
 				if (this.getThrower().isRiding())
-					this.getThrower().mountEntity((Entity)null);
+					this.getThrower().mountEntity(null);
 				EnderTeleportEvent event = new EnderTeleportEvent(this.getThrower(), x, y, z, 5.0F);
 				this.getThrower().setPositionAndUpdate(event.targetX, event.targetY + 1, event.targetZ);
 				this.getThrower().fallDistance = 0.0F;

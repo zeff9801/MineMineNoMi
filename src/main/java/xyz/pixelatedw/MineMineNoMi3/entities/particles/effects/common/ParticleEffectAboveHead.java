@@ -1,14 +1,14 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.common;
 
-import java.util.Random;
-
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.ParticleEffect;
 
+import java.util.Random;
+
 public class ParticleEffectAboveHead extends ParticleEffect
 {
-	private String particle;
+	private final String particle;
 	
 	public ParticleEffectAboveHead(String particle)
 	{

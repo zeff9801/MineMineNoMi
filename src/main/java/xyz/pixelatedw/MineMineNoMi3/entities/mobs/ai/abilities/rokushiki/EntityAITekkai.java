@@ -1,7 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.mobs.ai.abilities.rokushiki;
 
-import java.util.UUID;
-
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
@@ -10,6 +8,8 @@ import net.minecraft.potion.PotionEffect;
 import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.mobs.EntityNewMob;
 import xyz.pixelatedw.MineMineNoMi3.entities.mobs.ai.EntityAICooldown;
+
+import java.util.UUID;
 
 public class EntityAITekkai extends EntityAICooldown
 {

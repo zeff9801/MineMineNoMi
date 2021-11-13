@@ -1,16 +1,14 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.suna;
 
-import java.util.Random;
-
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.MainMod;
-import xyz.pixelatedw.MineMineNoMi3.api.EnumParticleTypes;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.ParticleEffect;
+
+import java.util.Random;
 
 public class ParticleEffectDesertSpada extends ParticleEffect
 {

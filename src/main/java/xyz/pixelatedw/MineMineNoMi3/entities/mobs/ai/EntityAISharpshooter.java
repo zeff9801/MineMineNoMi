@@ -1,6 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.mobs.ai;
 
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.util.MathHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityAttribute;

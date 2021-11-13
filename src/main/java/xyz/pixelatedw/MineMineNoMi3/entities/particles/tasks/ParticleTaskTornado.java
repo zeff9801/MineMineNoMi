@@ -1,11 +1,10 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.tasks;
 
-import java.util.TimerTask;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
-import xyz.pixelatedw.MineMineNoMi3.MainMod;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
+
+import java.util.TimerTask;
 
 public class ParticleTaskTornado extends TimerTask
 {

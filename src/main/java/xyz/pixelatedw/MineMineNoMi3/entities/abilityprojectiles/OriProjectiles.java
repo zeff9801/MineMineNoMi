@@ -1,7 +1,6 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import xyz.pixelatedw.MineMineNoMi3.MainConfig;

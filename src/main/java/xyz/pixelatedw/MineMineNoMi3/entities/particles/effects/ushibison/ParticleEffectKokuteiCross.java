@@ -1,11 +1,11 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.ushibison;
 
-import java.util.Timer;
-
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.api.EnumParticleTypes;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.ParticleEffect;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.tasks.ParticleTaskTornado2;
+
+import java.util.Timer;
 
 public class ParticleEffectKokuteiCross extends ParticleEffect
 {

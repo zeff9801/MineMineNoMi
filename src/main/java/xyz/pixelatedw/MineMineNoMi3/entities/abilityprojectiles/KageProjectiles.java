@@ -1,24 +1,18 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
-import java.util.ArrayList;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import xyz.pixelatedw.MineMineNoMi3.abilities.BomuAbilities.KickBomb;
-import xyz.pixelatedw.MineMineNoMi3.abilities.BomuAbilities.NoseFancyCannon;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
-import xyz.pixelatedw.MineMineNoMi3.api.abilities.Ability;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityAttribute;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityProjectile;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.GuraProjectiles.Kaishin;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.GuraProjectiles.ShimaYurashi;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListExtraAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
+
+import java.util.ArrayList;
 
 public class KageProjectiles 
 {

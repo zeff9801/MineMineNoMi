@@ -1,13 +1,8 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.mobs.ai.abilities;
 
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
-import xyz.pixelatedw.MineMineNoMi3.api.debug.WyDebug;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.SwordsmanProjectiles.Yakkodori;
 import xyz.pixelatedw.MineMineNoMi3.entities.mobs.EntityNewMob;
-import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 
 public class EntityAIGapCloser extends EntityAIBase
 {

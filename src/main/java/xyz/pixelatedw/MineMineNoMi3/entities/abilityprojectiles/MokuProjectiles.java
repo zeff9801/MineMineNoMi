@@ -1,8 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
@@ -14,6 +11,9 @@ import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
 import xyz.pixelatedw.MineMineNoMi3.helpers.DevilFruitsHelper;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class MokuProjectiles 
 {
@@ -107,7 +107,7 @@ public class MokuProjectiles
 		public void tasksImapct(MovingObjectPosition hit)
 		{
 			if(hit.entityHit != null && !hit.entityHit.isDead)
-				((EntityLivingBase) hit.entityHit).setPosition(this.getThrower().posX, this.getThrower().posY, this.getThrower().posZ);
+				hit.entityHit.setPosition(this.getThrower().posX, this.getThrower().posY, this.getThrower().posZ);
 		}
 	}
 }

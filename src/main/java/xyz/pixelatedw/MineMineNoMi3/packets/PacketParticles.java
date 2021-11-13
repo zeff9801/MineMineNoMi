@@ -1,9 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.packets;
 
-import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import cpw.mods.fml.common.network.ByteBufUtils;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
@@ -21,6 +17,8 @@ import xyz.pixelatedw.MineMineNoMi3.api.debug.WyDebug;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedEntityData;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.ParticleManager;
+
+import java.util.Random;
 
 public class PacketParticles implements IMessage
 {

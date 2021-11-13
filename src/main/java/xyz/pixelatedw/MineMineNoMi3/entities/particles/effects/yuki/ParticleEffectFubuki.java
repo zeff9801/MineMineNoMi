@@ -1,13 +1,13 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.yuki;
 
-import java.util.Random;
-
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.MainMod;
 import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.ParticleEffect;
+
+import java.util.Random;
 
 public class ParticleEffectFubuki extends ParticleEffect
 {
@@ -25,7 +25,7 @@ public class ParticleEffectFubuki extends ParticleEffect
 	        double motionZ = WyMathHelper.randomWithRange(-1, 1) + player.worldObj.rand.nextDouble();
 	        
             double middlePoint = 0.2D;
-            middlePoint *= (double)(player.worldObj.rand.nextFloat() * player.worldObj.rand.nextFloat() + 0.3F);
+            middlePoint *= player.worldObj.rand.nextFloat() * player.worldObj.rand.nextFloat() + 0.3F;
 	        
 	        motionX *= middlePoint / 2;
 	        motionY *= middlePoint / 2;

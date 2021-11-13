@@ -1,7 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.mobs.animals;
 
-import java.util.UUID;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
@@ -23,6 +21,8 @@ import xyz.pixelatedw.MineMineNoMi3.api.EnumParticleTypes;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.mobs.EntityNewMob;
+
+import java.util.UUID;
 
 public class EntityYagaraBull extends EntityNewMob implements IEntityOwnable
 {

@@ -1,7 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.effects.mera;
 
-import java.util.Random;
-
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.MainMod;
@@ -25,7 +23,7 @@ public class ParticleEffectDaiEnkai extends ParticleEffect
 	        double motionZ = WyMathHelper.randomWithRange(-1, 1) + player.worldObj.rand.nextDouble();
 	        
             double middlePoint = 0.5D / (5 / 0.5);
-            middlePoint *= (double)(player.worldObj.rand.nextFloat() * player.worldObj.rand.nextFloat() + 0.3F);
+            middlePoint *= player.worldObj.rand.nextFloat() * player.worldObj.rand.nextFloat() + 0.3F;
 	        
 	        motionX *= middlePoint / 2;
 	        motionY *= middlePoint / 2;

@@ -1,9 +1,9 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.particles.tasks;
 
-import java.util.TimerTask;
-
 import net.minecraft.entity.EntityLivingBase;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
+
+import java.util.TimerTask;
 
 public class ParticleTaskWave2 extends TimerTask
 {

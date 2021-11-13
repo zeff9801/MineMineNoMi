@@ -1,10 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.helpers;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -23,14 +18,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.MainConfig;
-import xyz.pixelatedw.MineMineNoMi3.abilities.CyborgAbilities;
-import xyz.pixelatedw.MineMineNoMi3.abilities.DoctorAbilities;
-import xyz.pixelatedw.MineMineNoMi3.abilities.FishKarateAbilities;
-import xyz.pixelatedw.MineMineNoMi3.abilities.HakiAbilities;
-import xyz.pixelatedw.MineMineNoMi3.abilities.RokushikiAbilities;
-import xyz.pixelatedw.MineMineNoMi3.abilities.SniperAbilities;
-import xyz.pixelatedw.MineMineNoMi3.abilities.SwordsmanAbilities;
-import xyz.pixelatedw.MineMineNoMi3.abilities.WeatherAbilities;
+import xyz.pixelatedw.MineMineNoMi3.abilities.*;
 import xyz.pixelatedw.MineMineNoMi3.abilities.effects.DFEffectHaoHaki;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.Ability;
@@ -46,6 +34,11 @@ import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListQuests;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketShounenScream;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 public class DevilFruitsHelper
 {
