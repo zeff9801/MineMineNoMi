@@ -32,12 +32,12 @@ public class ExtendedEntityData implements IExtendedEntityProperties
 		this.entity = entity;	
 	}
 	
-	public static final void register(EntityLivingBase entity) 
+	public static void register(EntityLivingBase entity)
 	{
 		entity.registerExtendedProperties(ExtendedEntityData.EXT_PROP_NAME, new ExtendedEntityData(entity));
 	}
 
-	public static final ExtendedEntityData get(EntityLivingBase entity) 
+	public static ExtendedEntityData get(EntityLivingBase entity)
 	{
 		return (ExtendedEntityData) entity.getExtendedProperties(EXT_PROP_NAME);
 	}
@@ -160,9 +160,8 @@ public class ExtendedEntityData implements IExtendedEntityProperties
 	public int getKingHakiExp() { return this.haoExp; }
 	public void addKingHakiExp(int i) 
 	{
-		if(this.haoExp + i >= Values.MAX_HAKI_EXP) return;	
-		if(this.haoExp + i < 0) this.haoExp = 0;
-		else this.haoExp = this.haoExp + i;
+		if(this.haoExp + i >= Values.MAX_HAKI_EXP) return;
+		this.haoExp = Math.max(this.haoExp + i, 0);
 	}
 	
 	
@@ -170,24 +169,21 @@ public class ExtendedEntityData implements IExtendedEntityProperties
 	public void addObservationHakiExp(int i) 
 	{
 		if(this.kenExp + i >= Values.MAX_HAKI_EXP) return;
-		if(this.kenExp + i < 0) this.kenExp = 0;
-		else this.kenExp = this.kenExp + i;
+		this.kenExp = Math.max(this.kenExp + i, 0);
 	}
 	
 	public int getImbuingHakiExp() { return this.itemBusoExp; }
 	public void addImbuingHakiExp(int i) 
 	{
-		if(this.itemBusoExp + i >= Values.MAX_HAKI_EXP) return;	
-		if(this.itemBusoExp + i < 0) this.itemBusoExp = 0;
-		else this.itemBusoExp = this.itemBusoExp + i;
+		if(this.itemBusoExp + i >= Values.MAX_HAKI_EXP) return;
+		this.itemBusoExp = Math.max(this.itemBusoExp + i, 0);
 	}
 	
 	public int getHardeningHakiExp() { return this.punchBusoExp; }
 	public void addHardeningHakiExp(int i) 
 	{
-		if(this.punchBusoExp + i >= Values.MAX_HAKI_EXP) return;	
-		if(this.punchBusoExp + i < 0) this.punchBusoExp = 0;
-		else this.punchBusoExp = this.punchBusoExp + i;
+		if(this.punchBusoExp + i >= Values.MAX_HAKI_EXP) return;
+		this.punchBusoExp = Math.max(this.punchBusoExp + i, 0);
 	}
 	
 	public float getDamageMultiplier() {return this.damageMultiplier;}
@@ -199,48 +195,42 @@ public class ExtendedEntityData implements IExtendedEntityProperties
 	public int getDoriki() {return doriki;}
 	public void alterDoriki(int i)
 	{
-		if(doriki + i < 0) doriki = 0;
-		else doriki = doriki + i;
+		doriki = Math.max(doriki + i, 0);
 	}
 	public void setDoriki(int i) {doriki = i;}
 	
 	public int getDorikiFromCommand() {return dorikiCmd;}
 	public void alterDorikiFromCommand(int i)
 	{
-		if(dorikiCmd + i < 0) dorikiCmd = 0;
-		else dorikiCmd = dorikiCmd + i;
+		dorikiCmd = Math.max(dorikiCmd + i, 0);
 	}
 	public void setDorikiFromCommand(int i) {dorikiCmd = i;}
 	
 	public int getExtol() {return this.extol;}
 	public void alterExtol(int i)
 	{
-		if(extol + i < 0) extol = 0;
-		else extol = extol + i;
+		extol = Math.max(extol + i, 0);
 	}
 	public void setExtol(int i) {this.extol = i;}
 	
 	public int getExtolFromCommand() {return this.extolCmd;}
 	public void alterExtolFromCommand(int i)
 	{
-		if(extolCmd + i < 0) extolCmd = 0;
-		else extolCmd = extolCmd + i;
+		extolCmd = Math.max(extolCmd + i, 0);
 	}
 	public void setExtolFromCommand(int i) {this.extolCmd = i;}
 	
 	public int getBelly() {return this.belly;}
 	public void alterBelly(int i)
 	{
-		if(belly + i < 0) belly = 0;
-		else belly = belly + i;
+		belly = Math.max(belly + i, 0);
 	}
 	public void setBelly(int i)	{this.belly = i;}
 	
 	public int getBellyFromCommand() {return this.bellyCmd;}
 	public void alterBellyFromCommand(int i)
 	{
-		if(bellyCmd + i < 0) bellyCmd = 0;
-		else bellyCmd = bellyCmd + i;
+		bellyCmd = Math.max(bellyCmd + i, 0);
 	}
 	public void setBellyFromCommand(int i)	{this.bellyCmd = i;}
 	
@@ -264,8 +254,7 @@ public class ExtendedEntityData implements IExtendedEntityProperties
 	public void alterCola(int i)
 	{
 		if(cola + i < 0) cola = 0;
-		else if(cola + i > getMaxCola()) cola = getMaxCola();
-		else cola = cola + i;
+		else cola = Math.min(cola + i, getMaxCola());
 	}
 	public void setCola(int i) {this.cola = i;}
 	
@@ -377,10 +366,8 @@ public class ExtendedEntityData implements IExtendedEntityProperties
 	}	
 	public boolean hasExtraEffects(String eff)
 	{
-		for(int i = 0; i < this.extraEffects.length; i++)
-		{
-			if(this.extraEffects[i] != null && !this.extraEffects[i].isEmpty() && this.extraEffects[i].equalsIgnoreCase(eff))
-			{
+		for (String extraEffect : this.extraEffects) {
+			if (extraEffect != null && !extraEffect.isEmpty() && extraEffect.equalsIgnoreCase(eff)) {
 				return true;
 			}
 		}

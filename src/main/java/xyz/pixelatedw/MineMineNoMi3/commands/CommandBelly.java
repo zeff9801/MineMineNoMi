@@ -22,7 +22,7 @@ public class CommandBelly extends CommandBase
 	{
 		// Checking if the basic formula is used
 		if(str.length < 2)
-			throw new WrongUsageException(this.getCommandUsage(sender), new Object[0]);
+			throw new WrongUsageException(this.getCommandUsage(sender));
 
 		// Initializing the variables
 		EntityPlayer target = null;

@@ -10,6 +10,7 @@ import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Values 
 {
@@ -38,6 +39,6 @@ public class Values
 	
 	public static Item[] KAIROSEKI_ITEMS = new Item[] {ListMisc.Kairoseki, ListMisc.KairosekiBullets, ListMisc.DenseKairoseki};
 	
-	public static HashMap<String, String[]> abilityWebAppExtraParams = new HashMap<String, String[]>();
+	public static Map<String, String[]> abilityWebAppExtraParams = new HashMap<String, String[]>();
 
 }

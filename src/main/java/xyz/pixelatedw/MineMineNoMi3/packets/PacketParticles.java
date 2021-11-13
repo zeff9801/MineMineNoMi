@@ -88,25 +88,36 @@ public class PacketParticles implements IMessage
 
 				EntityParticleFX logiaParticle = new EntityParticleFX(player.worldObj, ID.PARTICLE_ICON_MERA, message.posX + offsetX, (message.posY + 1) + offsetY, message.posZ + offsetZ, 0D, 0.01D, 0D)
 						.setParticleAge(10);
-				
-				if(devilFruit.equals("meramera"))
-					MainMod.proxy.spawnCustomParticles(player, logiaParticle);
-				else if(devilFruit.equals("hiehie"))
-					MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_HIE));
-				else if(devilFruit.equals("pikapika"))
-					MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_PIKA));
-				else if(devilFruit.equals("gorogoro"))
-					MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_GORO));
-				else if(devilFruit.equals("mokumoku"))
-					MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_MOKU));
-				else if(devilFruit.equals("sunasuna"))
-					MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_SUNA2));
-				else if(devilFruit.equals("magumagu"))
-					player.worldObj.spawnParticle(EnumParticleTypes.LAVA.getParticleName(), message.posX + offsetX, (message.posY + 1) + offsetY, message.posZ + offsetZ, 0D, 0D, 0D);
-				else if(devilFruit.equals("gasugasu"))
-					MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_GASU));
-				else if(devilFruit.equals("yukiyuki"))
-					MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_YUKI));
+
+				switch (devilFruit) {
+					case "meramera":
+						MainMod.proxy.spawnCustomParticles(player, logiaParticle);
+						break;
+					case "hiehie":
+						MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_HIE));
+						break;
+					case "pikapika":
+						MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_PIKA));
+						break;
+					case "gorogoro":
+						MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_GORO));
+						break;
+					case "mokumoku":
+						MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_MOKU));
+						break;
+					case "sunasuna":
+						MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_SUNA2));
+						break;
+					case "magumagu":
+						player.worldObj.spawnParticle(EnumParticleTypes.LAVA.getParticleName(), message.posX + offsetX, (message.posY + 1) + offsetY, message.posZ + offsetZ, 0D, 0D, 0D);
+						break;
+					case "gasugasu":
+						MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_GASU));
+						break;
+					case "yukiyuki":
+						MainMod.proxy.spawnCustomParticles(player, logiaParticle.setParticleTexture(ID.PARTICLE_ICON_YUKI));
+						break;
+				}
 				
 				pass = true;
 			}	

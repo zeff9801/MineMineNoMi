@@ -177,11 +177,8 @@ public class ToriPhoenixAbilities
 		public void hitEntity(EntityPlayer player, EntityLivingBase target) 
 		{
 			super.hitEntity(player, target);
-			
-			if(target.getHealth() + 6 < target.getMaxHealth())
-				target.setHealth(target.getHealth() + 6);
-			else
-				target.setHealth(target.getMaxHealth());
+
+			target.setHealth(Math.min(target.getHealth() + 6, target.getMaxHealth()));
 			
 			WyNetworkHelper.sendTo(new PacketParticles(ID.PARTICLEFX_BLUEFLAMES, player), (EntityPlayerMP) player);
 		}

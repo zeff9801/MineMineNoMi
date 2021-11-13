@@ -136,7 +136,7 @@ public class QuestProperties implements IExtendedEntityProperties
 	{
 		for(int i = 0; i < questsList.length; i++)
 		{
-			if(this.questsList[i] != null && this.questsList[i].getQuestID().toLowerCase().equals(questTemplate.getQuestID().toLowerCase()))
+			if(this.questsList[i] != null && this.questsList[i].getQuestID().equalsIgnoreCase(questTemplate.getQuestID()))
 			{
 				if(questTemplate.isPrimary())
 					this.hasPrimaryActive = false;
@@ -148,10 +148,8 @@ public class QuestProperties implements IExtendedEntityProperties
 	
 	public boolean hasQuestInTracker(Quest questTemplate)
 	{
-		for(int i = 0; i < questsList.length; i++)
-		{
-			if(this.questsList[i] != null && this.questsList[i].getQuestID().toLowerCase().equals(questTemplate.getQuestID().toLowerCase()))
-			{
+		for (Quest quest : questsList) {
+			if (quest != null && quest.getQuestID().equalsIgnoreCase(questTemplate.getQuestID())) {
 				return true;
 			}
 		}
@@ -161,10 +159,8 @@ public class QuestProperties implements IExtendedEntityProperties
 	
 	public boolean hasQuestCompleted(Quest questTemplate)
 	{
-		for(int i = 0; i < this.completedQuests.length; i++)
-		{
-			if(this.completedQuests[i] != null && this.completedQuests[i].getQuestID().toLowerCase().equals(questTemplate.getQuestID().toLowerCase()))
-			{
+		for (Quest completedQuest : this.completedQuests) {
+			if (completedQuest != null && completedQuest.getQuestID().equalsIgnoreCase(questTemplate.getQuestID())) {
 				return true;
 			}
 		}
@@ -174,11 +170,9 @@ public class QuestProperties implements IExtendedEntityProperties
 	
 	public Quest getQuestFromTracker(Quest questTemplate)
 	{
-		for(int i = 0; i < questsList.length; i++)
-		{
-			if(this.questsList[i] != null && this.questsList[i].getQuestID().toLowerCase().equals(questTemplate.getQuestID().toLowerCase()))
-			{
-				return this.questsList[i];
+		for (Quest quest : questsList) {
+			if (quest != null && quest.getQuestID().toLowerCase().equals(questTemplate.getQuestID().toLowerCase())) {
+				return quest;
 			}
 		}
 		
@@ -199,11 +193,9 @@ public class QuestProperties implements IExtendedEntityProperties
 	{
 		if(this.hasPrimaryActive)
 		{
-			for(int i = 0; i < questsList.length; i++)
-			{
-				if(this.questsList[i] != null && this.questsList[i].isPrimary())
-				{
-					return this.questsList[i];
+			for (Quest quest : questsList) {
+				if (quest != null && quest.isPrimary()) {
+					return quest;
 				}
 			}
 		}
@@ -213,11 +205,9 @@ public class QuestProperties implements IExtendedEntityProperties
 	
 	public void alterQuestProgress(Quest questTemplate, double progress)
 	{
-		for(int i = 0; i < questsList.length; i++)
-		{
-			if(this.questsList[i] != null && this.questsList[i].getQuestID().toLowerCase().equals(questTemplate.getQuestID().toLowerCase()))
-			{
-				this.questsList[i].alterProgress(this.thePlayer, progress);
+		for (Quest quest : questsList) {
+			if (quest != null && quest.getQuestID().toLowerCase().equals(questTemplate.getQuestID().toLowerCase())) {
+				quest.alterProgress(this.thePlayer, progress);
 				break;
 			}
 		}
@@ -231,10 +221,8 @@ public class QuestProperties implements IExtendedEntityProperties
 	public int questsInProgress()
 	{
 		int inProgress = 0;
-		for(int i = 0; i < questsList.length; i++)
-		{
-			if(this.questsList[i] != null)
-			{
+		for (Quest quest : questsList) {
+			if (quest != null) {
 				inProgress++;
 			}
 		}

@@ -46,10 +46,8 @@ public class ItemsHelper
     	    	
     	if(!WyHelper.getEntitiesNear(posX, posY, posZ, world, 10).isEmpty())
     	{
-    		WyHelper.getEntitiesNear(posX, posY, posZ, world, 10).stream().filter(x -> 
-    		{
-    			return x instanceof EntityPlayer && (ExtendedEntityData.get(x).isPirate() || ExtendedEntityData.get(x).isRevolutionary()) && worldData.getBounty(x.getCommandSenderName()) != 0;
-    		}).forEach(x -> 
+    		WyHelper.getEntitiesNear(posX, posY, posZ, world, 10).stream().filter(x ->
+					x instanceof EntityPlayer && (ExtendedEntityData.get(x).isPirate() || ExtendedEntityData.get(x).isRevolutionary()) && worldData.getBounty(x.getCommandSenderName()) != 0).forEach(x ->
     		{
     			SimpleEntry<String, Long> se = new SimpleEntry<String, Long>( x.getCommandSenderName(), worldData.getBounty(x.getCommandSenderName()) );
     			bountiesInPackage.add( se );
@@ -60,7 +58,7 @@ public class ItemsHelper
     		bountiesInPackage.addAll( worldData.getAllBounties().entrySet().stream().filter(x -> !bountiesInPackage.contains(x) ).limit((5 + world.rand.nextInt(2)) - bountiesInPackage.size()).collect(Collectors.toList()) );
     	    	
     	// Spawning the wanted posters
-    	bountiesInPackage.stream().forEach(x -> 
+    	bountiesInPackage.forEach(x ->
     	{
     		ItemStack stack = new ItemStack(ListMisc.WantedPoster);
 	    	stack.setTagCompound(setWantedData(x.getKey(), x.getValue()));

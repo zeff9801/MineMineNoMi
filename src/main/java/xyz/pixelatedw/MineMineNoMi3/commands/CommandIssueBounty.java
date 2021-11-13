@@ -39,10 +39,8 @@ public class CommandIssueBounty extends CommandBase
 		}
 		else
 		{
-			player.worldObj.loadedEntityList.stream().filter(x -> 
-			{
-				return x instanceof EntityPlayer && (ExtendedEntityData.get((EntityLivingBase) x).isPirate() || ExtendedEntityData.get((EntityLivingBase) x).isRevolutionary()) && ExtendedEntityData.get((EntityLivingBase) x).getBounty() > 0;
-			}).forEach(x ->
+			player.worldObj.loadedEntityList.stream().filter(x ->
+					x instanceof EntityPlayer && (ExtendedEntityData.get((EntityLivingBase) x).isPirate() || ExtendedEntityData.get((EntityLivingBase) x).isRevolutionary()) && ExtendedEntityData.get((EntityLivingBase) x).getBounty() > 0).forEach(x ->
 			{
 				EntityPlayer pirate = (EntityPlayer) x;
 				worldData.issueBounty(pirate.getCommandSenderName(), ExtendedEntityData.get(pirate).getBounty());
@@ -59,10 +57,7 @@ public class CommandIssueBounty extends CommandBase
 		EntityPlayer senderEntity = CommandBase.getCommandSenderAsPlayer(sender);
 		boolean flag = FMLCommonHandler.instance().getMinecraftServerInstance().getConfigurationManager().func_152596_g(senderEntity.getGameProfile());
 
-		if ((MainConfig.commandPermissionIssueBounty == 2 && flag) || MainConfig.commandPermissionIssueBounty < 2)
-			return true;
-		else
-			return false;
+		return (MainConfig.commandPermissionIssueBounty == 2 && flag) || MainConfig.commandPermissionIssueBounty < 2;
 	}
 
 	@Override

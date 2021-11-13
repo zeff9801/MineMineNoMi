@@ -168,10 +168,8 @@ public class AbilityProperties implements IExtendedEntityProperties
 	
 	public boolean hasDevilFruitAbility(Ability ablTemplate)
 	{
-		for(int i = 0; i < devilFruitAbilities.length; i++)
-		{
-			if(this.devilFruitAbilities[i] != null && this.devilFruitAbilities[i].getAttribute().getAttributeName().equalsIgnoreCase(ablTemplate.getAttribute().getAttributeName()))
-			{
+		for (Ability devilFruitAbility : devilFruitAbilities) {
+			if (devilFruitAbility != null && devilFruitAbility.getAttribute().getAttributeName().equalsIgnoreCase(ablTemplate.getAttribute().getAttributeName())) {
 				return true;
 			}
 		}

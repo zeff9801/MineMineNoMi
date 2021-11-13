@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -51,17 +52,15 @@ public class ExtendedWorldData extends WorldSavedData
 
 		NBTTagCompound bounties = nbt.getCompoundTag("issuedBounties");
 		this.issuedBounties.clear();
-		bounties.func_150296_c().stream().forEach(x ->
+		bounties.func_150296_c().forEach(x ->
 		{
 			this.issuedBounties.put((String) x, bounties.getLong((String) x));
 		});
 
 		NBTTagCompound devilFruits = nbt.getCompoundTag("devilFruits");
 		this.devilFruitsInWorld.clear();
-		devilFruits.func_150296_c().stream().forEach(x ->
-		{
-			this.devilFruitsInWorld.add((String) x);
-		});
+		devilFruits.func_150296_c().forEach(x ->
+				this.devilFruitsInWorld.add((String) x));
 
 		NBTTagCompound protectedAreas = nbt.getCompoundTag("protectedAreas");
 		this.protectedAreas.clear();
@@ -82,25 +81,20 @@ public class ExtendedWorldData extends WorldSavedData
 		NBTTagCompound bounties = new NBTTagCompound();
 		if (issuedBounties.size() > 0)
 		{
-			issuedBounties.entrySet().stream().forEach(x ->
-			{
-				bounties.setLong(x.getKey(), x.getValue());
-			});
+			issuedBounties.forEach(bounties::setLong);
 		}
 		nbt.setTag("issuedBounties", bounties);
 
 		NBTTagCompound devilFruits = new NBTTagCompound();
-		if (devilFruitsInWorld.size() > 0)
+		if (!devilFruitsInWorld.isEmpty())
 		{
-			devilFruitsInWorld.stream().forEach(x ->
-			{
-				devilFruits.setBoolean(x, true);
-			});
+			devilFruitsInWorld.forEach(x ->
+					devilFruits.setBoolean(x, true));
 		}
 		nbt.setTag("devilFruits", devilFruits);
 
 		NBTTagCompound protectedAreas = new NBTTagCompound();
-		if (this.protectedAreas.size() > 0)
+		if (!this.protectedAreas.isEmpty())
 		{
 			int i = 0;
 			for (int[][] area : this.protectedAreas)
@@ -115,7 +109,7 @@ public class ExtendedWorldData extends WorldSavedData
 
 	public boolean isInsideRestrictedArea(int posX, int posY, int posZ)
 	{
-		if(this.protectedAreas.size() <= 0)
+		if(this.protectedAreas.isEmpty())
 			return false;
 		
 		for (int[][] area : this.protectedAreas)
@@ -173,7 +167,7 @@ public class ExtendedWorldData extends WorldSavedData
 		return this.protectedAreas;
 	}
 
-	public HashMap<String, Long> getAllBounties()
+	public Map<String, Long> getAllBounties()
 	{
 		return this.issuedBounties;
 	}

@@ -183,7 +183,7 @@ public class WeatherProjectiles
 			if(!this.worldObj.isRemote)
 			{
 				List weatherBallsNear = WyHelper.getEntitiesNear(this, new double[] {4, 1, 4}, WeatherBall.class);
-				if(weatherBallsNear.size() > 0 && this.ticksExisted > 100)
+				if(!weatherBallsNear.isEmpty() && this.ticksExisted > 100)
 				{
 					List<HeatBall> heatBalls = (List<HeatBall>) weatherBallsNear.stream().filter(x ->
 					{
@@ -192,7 +192,7 @@ public class WeatherProjectiles
 						return ball instanceof HeatBall;
 					}).collect(Collectors.toList());
 
-					if(heatBalls.size() > 0)
+					if(!heatBalls.isEmpty())
 					{
 						EntityWeatherCloud weatherCloud = new EntityWeatherCloud(worldObj);
 						weatherCloud.setThrower((EntityPlayer) this.getThrower());

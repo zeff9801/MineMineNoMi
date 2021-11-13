@@ -42,22 +42,18 @@ public class HistoryProperties implements IExtendedEntityProperties
 	public void saveNBTData(NBTTagCompound compound)
 	{
 		NBTTagCompound unlockedChallengesTag = new NBTTagCompound();
-		if (this.unlockedChallenges.size() > 0)
+		if (!this.unlockedChallenges.isEmpty())
 		{
-			this.unlockedChallenges.stream().forEach(x ->
-			{
-				unlockedChallengesTag.setBoolean(x, true);
-			});
+			this.unlockedChallenges.forEach(x ->
+					unlockedChallengesTag.setBoolean(x, true));
 		}
 		compound.setTag("unlockedChallenges", unlockedChallengesTag);
 		
 		NBTTagCompound completedChallengesTag = new NBTTagCompound();
-		if (this.completedChallenges.size() > 0)
+		if (!this.completedChallenges.isEmpty())
 		{
-			this.completedChallenges.stream().forEach(x ->
-			{
-				completedChallengesTag.setBoolean(x, true);
-			});
+			this.completedChallenges.forEach(x ->
+					completedChallengesTag.setBoolean(x, true));
 		}
 		compound.setTag("completedChallenges", completedChallengesTag);
 	}
@@ -74,10 +70,8 @@ public class HistoryProperties implements IExtendedEntityProperties
 		
 		NBTTagCompound completedChallenges = compound.getCompoundTag("completedChallenges");
 		this.completedChallenges.clear();
-		completedChallenges.func_150296_c().stream().forEach(x ->
-		{
-			this.completedChallenges.add((String) x);
-		});		
+		completedChallenges.func_150296_c().forEach(x ->
+				this.completedChallenges.add((String) x));
 	}
 
 	@Override

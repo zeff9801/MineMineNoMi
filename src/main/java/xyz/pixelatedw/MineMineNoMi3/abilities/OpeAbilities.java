@@ -180,10 +180,8 @@ public static class Takt extends Ability
 			this.endPassive(player);
 		}
 
-		Iterator it = entitiesInRoom.entrySet().iterator();
-		while (it.hasNext())
-		{
-			Map.Entry<EntityLivingBase, Double> pair = (Map.Entry) it.next();
+		for (Map.Entry<EntityLivingBase, Double> entityLivingBaseDoubleEntry : entitiesInRoom.entrySet()) {
+			Map.Entry<EntityLivingBase, Double> pair = (Map.Entry) entityLivingBaseDoubleEntry;
 			pair.getKey().setPositionAndUpdate(pair.getKey().posX, pair.getValue(), pair.getKey().posZ);
 			pair.getKey().fallDistance = 0;
 		}

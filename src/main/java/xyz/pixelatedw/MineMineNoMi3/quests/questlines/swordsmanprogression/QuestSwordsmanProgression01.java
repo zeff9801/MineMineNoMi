@@ -1,8 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.quests.questlines.swordsmanprogression;
 
-import java.util.Iterator;
-import java.util.Map.Entry;
-
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -19,6 +16,9 @@ import xyz.pixelatedw.MineMineNoMi3.items.weapons.ItemCoreWeapon;
 import xyz.pixelatedw.MineMineNoMi3.quests.EnumQuestlines;
 import xyz.pixelatedw.MineMineNoMi3.quests.IInteractQuest;
 import xyz.pixelatedw.MineMineNoMi3.quests.IProgressionQuest;
+
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 public class QuestSwordsmanProgression01 extends Quest implements IInteractQuest, IProgressionQuest
 {
@@ -111,24 +111,18 @@ public class QuestSwordsmanProgression01 extends Quest implements IInteractQuest
 		
 		if(heldItem != null && (heldItem.getItem() instanceof ItemSword || heldItem.getItem() instanceof ItemCoreWeapon))
 		{
-			Iterator iterator = heldItem.getAttributeModifiers().entries().iterator();
 
-			while (iterator.hasNext())
-			{
-				Entry entry = (Entry)iterator.next();
-				
-				if(entry.getKey().equals(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName()))
-				{
-					AttributeModifier attrmodif = (AttributeModifier)entry.getValue();
+			for (Object o : heldItem.getAttributeModifiers().entries()) {
+				Entry entry = (Entry) o;
+
+				if (entry.getKey().equals(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName())) {
+					AttributeModifier attrmodif = (AttributeModifier) entry.getValue();
 					double damage = attrmodif.getAmount();
-					
-					if(damage >= 7)
-					{
-						return true;						
-					}
-					else
-					{
-						WyHelper.sendMsgToPlayer(player, "<Swordsman Master> That sword of yours is way too weak, you won't get anywhere with that excuse of a sword.");	
+
+					if (damage >= 7) {
+						return true;
+					} else {
+						WyHelper.sendMsgToPlayer(player, "<Swordsman Master> That sword of yours is way too weak, you won't get anywhere with that excuse of a sword.");
 						return false;
 					}
 				}

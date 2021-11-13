@@ -28,9 +28,9 @@ public class EventsCrew
 			// TODO Should be replaced by actual crew data from some NBT when the time comes !
 			List<EntityLivingBase> crewMembers = WyHelper.getEntitiesNear(attacker, 20, EntityMob.class).stream().collect(Collectors.toList());
 
-			if(crewMembers.size() > 0)
+			if(!crewMembers.isEmpty())
 			{
-				crewMembers.stream().forEach(x -> 
+				crewMembers.forEach(x ->
 				{
 					if(x instanceof IEntityOwnable && x instanceof EntityMob)
 					{

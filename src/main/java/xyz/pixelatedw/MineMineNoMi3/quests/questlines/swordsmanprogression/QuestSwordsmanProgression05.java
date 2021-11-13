@@ -228,9 +228,8 @@ public class QuestSwordsmanProgression05 extends Quest implements IInteractQuest
 		{
 			boolean flagMob = target instanceof BanditData;
 			boolean flagCompletion = this.getProgress() < this.getMaxProgress() - 1;
-			
-			if(flagMob && flagCompletion)
-				return true;
+
+			return flagMob && flagCompletion;
 		}
 		else if(questPhase == 1)
 		{
