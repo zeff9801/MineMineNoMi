@@ -1,21 +1,15 @@
 package xyz.pixelatedw.MineMineNoMi3.abilities;
 
-import com.mojang.realmsclient.gui.ChatFormatting;
-
-import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.MovingObjectPosition;
 import xyz.pixelatedw.MineMineNoMi3.Values;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.Ability;
-import xyz.pixelatedw.MineMineNoMi3.api.network.WyNetworkHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.KageProjectiles;
 import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.KageProjectiles.TsunotokagePillar;
 import xyz.pixelatedw.MineMineNoMi3.entities.mobs.misc.EntityDoppelman;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListExtraAttributes;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketPlayer;
 
 public class KageAbilities
 {

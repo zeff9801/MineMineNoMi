@@ -2,9 +2,6 @@ package xyz.pixelatedw.MineMineNoMi3.abilities;
 
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.Values;
-import xyz.pixelatedw.MineMineNoMi3.abilities.BariAbilities.Barrier;
-import xyz.pixelatedw.MineMineNoMi3.abilities.BariAbilities.BarrierBall;
-import xyz.pixelatedw.MineMineNoMi3.abilities.BariAbilities.BarrierCrash;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.Ability;
 import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.HoroProjectiles;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;

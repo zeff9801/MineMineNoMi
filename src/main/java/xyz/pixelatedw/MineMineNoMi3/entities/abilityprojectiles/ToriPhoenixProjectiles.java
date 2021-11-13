@@ -1,21 +1,15 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
-import java.util.ArrayList;
-
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.MainMod;
-import xyz.pixelatedw.MineMineNoMi3.api.EnumParticleTypes;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityAttribute;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityProjectile;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.CyborgProjectiles.CoupDeVent;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.CyborgProjectiles.FreshFire;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.CyborgProjectiles.RadicalBeam;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.CyborgProjectiles.StrongRight;
 import xyz.pixelatedw.MineMineNoMi3.entities.particles.EntityParticleFX;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
+
+import java.util.ArrayList;
 
 public class ToriPhoenixProjectiles
 {

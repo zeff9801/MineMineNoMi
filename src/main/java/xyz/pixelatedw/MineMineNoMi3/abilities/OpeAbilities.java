@@ -1,11 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.abilities;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -32,6 +26,8 @@ import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketPlayer;
+
+import java.util.*;
 
 public class OpeAbilities
 {
@@ -135,7 +131,7 @@ public class OpeAbilities
 
 public static class Takt extends Ability
 {
-	private HashMap<EntityLivingBase, Double> entitiesInRoom = new HashMap<EntityLivingBase, Double>();
+	private final HashMap<EntityLivingBase, Double> entitiesInRoom = new HashMap<EntityLivingBase, Double>();
 
 	public Takt()
 	{

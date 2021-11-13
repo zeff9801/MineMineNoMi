@@ -1,12 +1,8 @@
 package xyz.pixelatedw.MineMineNoMi3.abilities;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.Values;
@@ -17,7 +13,6 @@ import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.PikaProjectiles;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketPlayer;
 
 public class PikaAbilities
 {
@@ -129,7 +124,7 @@ public class PikaAbilities
 					int y = mop.blockY;
 					int z = mop.blockZ;
 					if (player.isRiding())
-						player.mountEntity((Entity)null);
+						player.mountEntity(null);
 					EnderTeleportEvent event = new EnderTeleportEvent(player, x, y, z, 5.0F);
 					WyNetworkHelper.sendToAllAround(new PacketParticles(ID.PARTICLEFX_YATANOKAGAMI, player), player.dimension, player.posX, player.posY, player.posZ, ID.GENERIC_PARTICLES_RENDER_DISTANCE);
 	                player.setPositionAndUpdate(event.targetX, event.targetY + 1, event.targetZ);

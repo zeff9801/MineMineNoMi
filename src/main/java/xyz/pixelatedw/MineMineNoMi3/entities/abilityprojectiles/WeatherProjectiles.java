@@ -1,10 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.stream.Collectors;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
@@ -33,6 +28,11 @@ import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListExtraAttributes;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketPlayer;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 public class WeatherProjectiles
 {
@@ -284,7 +284,7 @@ public class WeatherProjectiles
 	{
 		private int life = 300;
 		private EntityPlayer thrower;
-		private List<WeatherBall> weatherBalls = new ArrayList<WeatherBall>();
+		private final List<WeatherBall> weatherBalls = new ArrayList<WeatherBall>();
 		private boolean charged = false;
 		private boolean superCharged = false;
 		

@@ -1,16 +1,15 @@
 package xyz.pixelatedw.MineMineNoMi3;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import xyz.pixelatedw.MineMineNoMi3.items.AkumaNoMi;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class Values 
 {

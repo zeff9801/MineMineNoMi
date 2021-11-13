@@ -1,14 +1,7 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.entities.zoans;
 
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Optional;
-
-import org.lwjgl.opengl.GL11;
-
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture.Type;
-
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
@@ -26,17 +19,22 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedEntityData;
 import xyz.pixelatedw.MineMineNoMi3.helpers.MorphsHelper;
 import xyz.pixelatedw.MineMineNoMi3.models.entities.zoans.ModelZoanMorph;
 
+import java.util.Arrays;
+import java.util.Map;
+import java.util.Optional;
+
 public class RenderZoanMorph extends Render
 {
 	private ResourceLocation texture = new ResourceLocation(ID.PROJECT_ID, "textures/models/null.png");
-	private ModelBase model;
-	private double scale;
-	private float offset[] = new float[3];
+	private final ModelBase model;
+	private final double scale;
+	private float[] offset = new float[3];
 
 	public RenderZoanMorph(ModelBase model, String texture)
 	{
@@ -94,7 +92,7 @@ public class RenderZoanMorph extends Render
 		this.renderManager = RenderManager.instance;
 	}
 
-	public RenderZoanMorph(ModelBase model, String texture, double scale, float offset[])
+	public RenderZoanMorph(ModelBase model, String texture, double scale, float[] offset)
 	{
 		this.shadowSize = 0;
 		this.model = model;
@@ -304,7 +302,6 @@ public class RenderZoanMorph extends Render
 
 		for (f3 = upperLimit - lowerLimit; f3 < -180.0F; f3 += 360.0F)
 		{
-			;
 		}
 
 		while (f3 >= 180.0F)

@@ -2,7 +2,6 @@ package xyz.pixelatedw.MineMineNoMi3.abilities;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.EntityTracker;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
@@ -10,28 +9,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.server.S0BPacketAnimation;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.WorldServer;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.MainConfig;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
-import xyz.pixelatedw.MineMineNoMi3.api.WyHelper.Direction;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.Ability;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.extra.AbilityProperties;
-import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.network.PacketAbilitySync;
 import xyz.pixelatedw.MineMineNoMi3.api.network.WyNetworkHelper;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedEntityData;
 import xyz.pixelatedw.MineMineNoMi3.helpers.DevilFruitsHelper;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketEntityVelocity;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketNewAABB;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketPlayer;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketSync;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketSyncInfo;
+import xyz.pixelatedw.MineMineNoMi3.packets.*;
 
 public class MoguAbilities
 {
@@ -88,15 +78,15 @@ public class MoguAbilities
 						}
 						else
 						{
-							double mX = (double)(-MathHelper.sin(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4);
-							double mZ = (double)(MathHelper.cos(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4);
+							double mX = -MathHelper.sin(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4;
+							double mZ = MathHelper.cos(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4;
 							
 							this.initialY = (int) player.posY;
 							this.breakBlocks = true;
 							
 							double f2 = MathHelper.sqrt_double(mX * mX + player.motionY * player.motionY + mZ * mZ);
-							mX /= (double)f2;
-							mZ /= (double)f2;
+							mX /= f2;
+							mZ /= f2;
 							mX += player.worldObj.rand.nextGaussian() * 0.007499999832361937D * 1.0;
 							mZ += player.worldObj.rand.nextGaussian() * 0.007499999832361937D * 1.0;
 							mX *= 4;
@@ -165,12 +155,12 @@ public class MoguAbilities
 
 		public void hitEntity(EntityPlayer player, EntityLivingBase target)
 		{
-			double mX = (double)(-MathHelper.sin(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4);
-			double mZ = (double)(MathHelper.cos(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4);
+			double mX = -MathHelper.sin(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4;
+			double mZ = MathHelper.cos(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4;
 				
 			double f2 = MathHelper.sqrt_double(mX * mX + player.motionY * player.motionY + mZ * mZ);
-			mX /= (double)f2;
-			mZ /= (double)f2;
+			mX /= f2;
+			mZ /= f2;
 			mX += player.worldObj.rand.nextGaussian() * 0.007499999832361937D * 1.0;
 			mZ += player.worldObj.rand.nextGaussian() * 0.007499999832361937D * 1.0;
 			mX *= 2.5;

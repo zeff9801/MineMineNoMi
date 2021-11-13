@@ -1,12 +1,6 @@
 package xyz.pixelatedw.MineMineNoMi3.abilities;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLiquid;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemBlock;
@@ -20,17 +14,20 @@ import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityProjectile;
 import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.network.WyNetworkHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.BakuProjectiles;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.JuryoProjectiles;
 import xyz.pixelatedw.MineMineNoMi3.helpers.DevilFruitsHelper;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class BakuAbilities
 {
 
 	public static Ability[] abilitiesArray = new Ability[] {new BakuMunch(), new BeroCannon(), new BakuTsuiho()};
 
-	private static Block[] bakuPermittedBlocks = new Block[] 
+	private static final Block[] bakuPermittedBlocks = new Block[]
 			{ 
 					Blocks.grass, Blocks.dirt, Blocks.leaves, Blocks.leaves2, Blocks.planks, Blocks.log, Blocks.log2, Blocks.stone, Blocks.cobblestone, Blocks.sand, Blocks.sandstone,
 					Blocks.gravel, Blocks.packed_ice, Blocks.clay, Blocks.hardened_clay, Blocks.cactus, Blocks.deadbush
@@ -52,8 +49,8 @@ public class BakuAbilities
 	
 	public static class BakuTsuiho extends Ability
 	{
-		private List<ItemStack> projectiles = new ArrayList<ItemStack>();
-		private List<Block> loadedProjectiles = new ArrayList<Block>();
+		private final List<ItemStack> projectiles = new ArrayList<ItemStack>();
+		private final List<Block> loadedProjectiles = new ArrayList<Block>();
 		
 		public BakuTsuiho() 
 		{
@@ -181,9 +178,9 @@ public class BakuAbilities
 						for(int y = 0; y < 3; y++)
 						for(int z = -2; z < 2; z++)
 						{
-							int posX = (int)mop.blockX + x;
-							int posY = (int)mop.blockY - y;
-							int posZ = (int)mop.blockZ + z;
+							int posX = mop.blockX + x;
+							int posY = mop.blockY - y;
+							int posZ = mop.blockZ + z;
 							
 							Block tempBlock = player.worldObj.getBlock(posX, posY, posZ);
 							if(DevilFruitsHelper.placeBlockIfAllowed(player.worldObj, posX, posY, posZ, Blocks.air, "all", "restricted", "ignore liquids"))

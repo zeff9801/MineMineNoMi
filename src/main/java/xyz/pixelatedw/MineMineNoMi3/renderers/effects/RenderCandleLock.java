@@ -1,22 +1,20 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.effects;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.models.effects.ModelCandleLock;
 
 public class RenderCandleLock extends Render
 {
-	private ResourceLocation texture = new ResourceLocation(ID.PROJECT_ID, "textures/models/zoanmorph/candlelock.png");
-	private ModelCandleLock model;
-	private double scale;
-	private float offset[] = new float[3];
+	private final ResourceLocation texture = new ResourceLocation(ID.PROJECT_ID, "textures/models/zoanmorph/candlelock.png");
+	private final ModelCandleLock model;
+	private final double scale;
+	private final float[] offset = new float[3];
 	
 	public RenderCandleLock(ModelBase model)
 	{

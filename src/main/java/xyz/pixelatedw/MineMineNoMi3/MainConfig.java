@@ -1,8 +1,8 @@
 package xyz.pixelatedw.MineMineNoMi3;
 
-import java.io.File;
-
 import net.minecraftforge.common.config.Configuration;
+
+import java.io.File;
 
 public class MainConfig 
 {

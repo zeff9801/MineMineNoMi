@@ -2,7 +2,6 @@ package xyz.pixelatedw.MineMineNoMi3.abilities;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -22,7 +21,6 @@ import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.YukiProjectiles;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketPlayer;
 
 public class YukiAbilities 
 {
@@ -124,7 +122,7 @@ public class YukiAbilities
 			{
 				if(MainConfig.enableGriefing)
 				{
-					Sphere.generate((int)(int) player.posX, (int)(int) player.posY, (int)(int) player.posZ, 25, new ISphere()
+					Sphere.generate((int) player.posX, (int) player.posY, (int) player.posZ, 25, new ISphere()
 				    { 
 						public void call(int x, int y, int z)
 						{

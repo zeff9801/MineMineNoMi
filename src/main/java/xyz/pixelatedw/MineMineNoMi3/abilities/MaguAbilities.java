@@ -1,6 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.abilities;
 
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -8,11 +7,8 @@ import xyz.pixelatedw.MineMineNoMi3.MainConfig;
 import xyz.pixelatedw.MineMineNoMi3.Values;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.Ability;
-import xyz.pixelatedw.MineMineNoMi3.api.math.ISphere;
-import xyz.pixelatedw.MineMineNoMi3.api.math.Sphere;
 import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.MaguProjectiles;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
-import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
 
 public class MaguAbilities 
 {

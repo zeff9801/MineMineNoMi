@@ -1,17 +1,12 @@
 package xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles;
 
-import java.util.ArrayList;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.world.World;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityAttribute;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.AbilityProjectile;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.MeraProjectiles.DaiEnkaiEntei;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.MeraProjectiles.Hidaruma;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.MeraProjectiles.Higan;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.MeraProjectiles.Hiken;
-import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.MeraProjectiles.Jujika;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
+
+import java.util.ArrayList;
 
 public class RokushikiProjectiles 
 {

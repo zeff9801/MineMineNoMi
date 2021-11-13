@@ -1,9 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.abilities;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -13,12 +9,12 @@ import net.minecraft.world.World;
 import xyz.pixelatedw.MineMineNoMi3.Values;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.Ability;
-import xyz.pixelatedw.MineMineNoMi3.api.math.ISphere;
-import xyz.pixelatedw.MineMineNoMi3.api.math.Sphere;
-import xyz.pixelatedw.MineMineNoMi3.blocks.BlockBarrier;
 import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.BariProjectiles;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BariAbilities 
 {

@@ -1,22 +1,15 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.entities;
 
-import org.lwjgl.opengl.GL11;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderBiped;
-import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import xyz.pixelatedw.MineMineNoMi3.ID;
-import xyz.pixelatedw.MineMineNoMi3.api.math.WyMathHelper;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedEntityData;
 import xyz.pixelatedw.MineMineNoMi3.entities.mobs.IDynamicRenderer;
 
@@ -24,8 +17,8 @@ import xyz.pixelatedw.MineMineNoMi3.entities.mobs.IDynamicRenderer;
 public class MobRenderer extends RenderBiped
 {
 
-	private ResourceLocation texture;
-	private float scale;
+	private final ResourceLocation texture;
+	private final float scale;
 
 	public MobRenderer(ModelBiped model, float scale, String tex)
 	{
@@ -67,7 +60,7 @@ public class MobRenderer extends RenderBiped
 			GL11.glTranslated(((IDynamicRenderer) entity).itemOffset()[0], ((IDynamicRenderer) entity).itemOffset()[1], ((IDynamicRenderer) entity).itemOffset()[2]);
 		}
 
-		ExtendedEntityData props = ExtendedEntityData.get((EntityLivingBase) entity);
+		ExtendedEntityData props = ExtendedEntityData.get(entity);
 		boolean hasHaki = props.hasBusoHakiActive();
 
 		if(hasHaki)

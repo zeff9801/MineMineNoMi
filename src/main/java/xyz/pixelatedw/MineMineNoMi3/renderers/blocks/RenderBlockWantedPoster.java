@@ -1,9 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.blocks;
 
-import java.text.DecimalFormat;
-
-import org.lwjgl.opengl.GL11;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
@@ -14,17 +10,20 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
 import xyz.pixelatedw.MineMineNoMi3.blocks.tileentities.TileEntityWantedPoster;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedWorldData;
 import xyz.pixelatedw.MineMineNoMi3.models.blocks.ModelWantedPoster;
 
+import java.text.DecimalFormat;
+
 @SideOnly(Side.CLIENT)
 public class RenderBlockWantedPoster extends TileEntitySpecialRenderer
 {
 	private static final ResourceLocation texture = new ResourceLocation(ID.PROJECT_ID + ":textures/models/wantedposter.png");
-	private ModelWantedPoster posterModel;
+	private final ModelWantedPoster posterModel;
 
 	public RenderBlockWantedPoster()
 	{

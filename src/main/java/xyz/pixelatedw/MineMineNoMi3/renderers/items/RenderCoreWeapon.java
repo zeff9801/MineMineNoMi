@@ -1,8 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.items;
 
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainerCreative;
 import net.minecraft.client.gui.inventory.GuiInventory;
@@ -16,6 +13,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraftforge.client.IItemRenderer;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL12;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedEntityData;
 
 public class RenderCoreWeapon implements IItemRenderer
@@ -89,7 +88,7 @@ public class RenderCoreWeapon implements IItemRenderer
 		boolean isFirstPerson = false;
 		if (data[1] != null && data[1] instanceof EntityPlayer)
 		{
-			if (!((EntityPlayer) data[1] == Minecraft.getMinecraft().renderViewEntity && Minecraft.getMinecraft().gameSettings.thirdPersonView == 0 && !((Minecraft.getMinecraft().currentScreen instanceof GuiInventory || Minecraft.getMinecraft().currentScreen instanceof GuiContainerCreative) && RenderManager.instance.playerViewY == 180.0F)))
+			if (!(data[1] == Minecraft.getMinecraft().renderViewEntity && Minecraft.getMinecraft().gameSettings.thirdPersonView == 0 && !((Minecraft.getMinecraft().currentScreen instanceof GuiInventory || Minecraft.getMinecraft().currentScreen instanceof GuiContainerCreative) && RenderManager.instance.playerViewY == 180.0F)))
 			{
 				GL11.glTranslatef(-0.01F, 0.01F, 0F);
 			}

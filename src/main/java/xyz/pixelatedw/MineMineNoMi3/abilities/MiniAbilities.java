@@ -1,17 +1,8 @@
 package xyz.pixelatedw.MineMineNoMi3.abilities;
 
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import xyz.pixelatedw.MineMineNoMi3.ID;
-import xyz.pixelatedw.MineMineNoMi3.abilities.MeroAbilities.MeroMeroMellow;
-import xyz.pixelatedw.MineMineNoMi3.abilities.MeroAbilities.PerfumeFemur;
-import xyz.pixelatedw.MineMineNoMi3.abilities.MeroAbilities.PistolKiss;
-import xyz.pixelatedw.MineMineNoMi3.abilities.MeroAbilities.SlaveArrow;
-import xyz.pixelatedw.MineMineNoMi3.abilities.effects.DFEffectMeroPetrification;
-import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.Ability;
-import xyz.pixelatedw.MineMineNoMi3.api.abilities.extra.AbilityExplosion;
 import xyz.pixelatedw.MineMineNoMi3.api.network.WyNetworkHelper;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedEntityData;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;

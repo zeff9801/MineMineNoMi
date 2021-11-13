@@ -1,10 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.entities.zoans;
 
-import java.util.Arrays;
-
-import org.lwjgl.opengl.GL11;
-
-import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import xyz.pixelatedw.MineMineNoMi3.models.entities.zoans.ModelYomi;
@@ -12,7 +7,7 @@ import xyz.pixelatedw.MineMineNoMi3.models.entities.zoans.ModelYomi;
 public class RenderMorphYomi extends RenderZoanMorph
 {
 
-	private ModelYomi model;
+	private final ModelYomi model;
 	
 	public RenderMorphYomi(ModelYomi model, String texture, double scale, float[] offset)
 	{

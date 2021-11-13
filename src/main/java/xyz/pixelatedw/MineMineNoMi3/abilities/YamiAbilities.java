@@ -1,8 +1,5 @@
 package xyz.pixelatedw.MineMineNoMi3.abilities;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -25,6 +22,9 @@ import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListExtraAttributes;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListMisc;
 import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class YamiAbilities 
 {
@@ -178,7 +178,7 @@ public class YamiAbilities
 	
 	public static class Kurouzu extends Ability
 	{
-		private List<EntityLivingBase> entities = new ArrayList<EntityLivingBase>();
+		private final List<EntityLivingBase> entities = new ArrayList<EntityLivingBase>();
 		
 		public Kurouzu() 
 		{
@@ -215,8 +215,7 @@ public class YamiAbilities
 		@Override
 		public void endCharging(EntityPlayer player)
 		{
-			if(this.entities.contains(player))
-				this.entities.remove(player);
+			this.entities.remove(player);
 			for(EntityLivingBase target : this.entities)
 			{
 				target.setPositionAndUpdate(player.posX, player.posY, player.posZ);

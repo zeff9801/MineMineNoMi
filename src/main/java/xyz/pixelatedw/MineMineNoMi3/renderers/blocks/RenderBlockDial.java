@@ -1,22 +1,19 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.blocks;
 
-import org.lwjgl.opengl.GL11;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import xyz.pixelatedw.MineMineNoMi3.ID;
-import xyz.pixelatedw.MineMineNoMi3.blocks.tileentities.TileEntityDenDenMushi;
-import xyz.pixelatedw.MineMineNoMi3.models.blocks.ModelBlockDenDenMushi;
 
 @SideOnly(Side.CLIENT)
 public class RenderBlockDial extends TileEntitySpecialRenderer
 {
-	private ModelBase model;
-	private ResourceLocation texture;
+	private final ModelBase model;
+	private final ResourceLocation texture;
 
 	public RenderBlockDial(ModelBase model, String textureName)
 	{

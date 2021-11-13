@@ -1,13 +1,11 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.blocks;
 
-import org.lwjgl.opengl.GL11;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.blocks.tileentities.TileEntityDenDenMushi;
 import xyz.pixelatedw.MineMineNoMi3.models.blocks.ModelBlockDenDenMushi;
@@ -15,7 +13,7 @@ import xyz.pixelatedw.MineMineNoMi3.models.blocks.ModelBlockDenDenMushi;
 @SideOnly(Side.CLIENT)
 public class RenderBlockDenDenMushi extends TileEntitySpecialRenderer
 {
-	private ModelBlockDenDenMushi model;
+	private final ModelBlockDenDenMushi model;
 	private static final ResourceLocation texture = new ResourceLocation(ID.PROJECT_ID + ":textures/models/denden2.png");
 
 	public RenderBlockDenDenMushi()

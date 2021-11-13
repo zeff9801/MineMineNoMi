@@ -1,21 +1,19 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.effects;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import xyz.pixelatedw.MineMineNoMi3.models.effects.ModelAbareHimatsuri;
-import xyz.pixelatedw.MineMineNoMi3.models.effects.ModelCandleLock;
 
 public class RenderAbareHimatsuri extends Render
 {
-	private ResourceLocation texture = new ResourceLocation("minecraft:textures/blocks/dirt.png");;
+	private ResourceLocation texture = new ResourceLocation("minecraft:textures/blocks/dirt.png");
 	private int blockTint;
-	private ModelAbareHimatsuri model;
-	private double scale;
+	private final ModelAbareHimatsuri model;
+	private final double scale;
 	
 	public RenderAbareHimatsuri(ModelBase model)
 	{

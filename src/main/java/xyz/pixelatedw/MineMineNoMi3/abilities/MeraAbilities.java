@@ -7,8 +7,6 @@ import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.Values;
 import xyz.pixelatedw.MineMineNoMi3.api.WyHelper;
 import xyz.pixelatedw.MineMineNoMi3.api.abilities.Ability;
-import xyz.pixelatedw.MineMineNoMi3.api.math.ISphere;
-import xyz.pixelatedw.MineMineNoMi3.api.math.Sphere;
 import xyz.pixelatedw.MineMineNoMi3.api.network.WyNetworkHelper;
 import xyz.pixelatedw.MineMineNoMi3.entities.abilityprojectiles.MeraProjectiles;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
@@ -53,7 +51,7 @@ public class MeraAbilities
 		{
 			this.projectile = new MeraProjectiles.Higan(player.worldObj, player, ListAttributes.HIGAN);
 			super.use(player);
-		};			
+		}
 	}
 
 	public static class DaiEnkaiEntei extends Ability
@@ -92,7 +90,7 @@ public class MeraAbilities
 		{
 			this.projectile = new MeraProjectiles.Hidaruma(player.worldObj, player, ListAttributes.HIDARUMA);
 			super.use(player);
-		};			
+		}
 	}
 
 	public static class Jujika extends Ability
@@ -106,7 +104,7 @@ public class MeraAbilities
 		{
 			this.projectile = new MeraProjectiles.Jujika(player.worldObj, player, ListAttributes.JUJIKA);
 			super.use(player);
-		};			
+		}
 	}
 
 	public static class Enjomo extends Ability

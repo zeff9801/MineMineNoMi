@@ -3,7 +3,6 @@ package xyz.pixelatedw.MineMineNoMi3.abilities;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import xyz.pixelatedw.MineMineNoMi3.ID;
@@ -15,11 +14,7 @@ import xyz.pixelatedw.MineMineNoMi3.api.network.PacketAbilitySync;
 import xyz.pixelatedw.MineMineNoMi3.api.network.WyNetworkHelper;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedEntityData;
 import xyz.pixelatedw.MineMineNoMi3.lists.ListAttributes;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketNewAABB;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketParticles;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketPlayer;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketSync;
-import xyz.pixelatedw.MineMineNoMi3.packets.PacketSyncInfo;
+import xyz.pixelatedw.MineMineNoMi3.packets.*;
 
 public class UshiBisonAbilities 
 {
@@ -130,12 +125,12 @@ public class UshiBisonAbilities
 			if((props.getZoanPoint().equals("power") || props.getZoanPoint().equals("speed") ) && !this.isOnCooldown)
 			{
 
-				double mX = (double)(-MathHelper.sin(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4);
-				double mZ = (double)(MathHelper.cos(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4);
+				double mX = -MathHelper.sin(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4;
+				double mZ = MathHelper.cos(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4;
 					
 				double f2 = MathHelper.sqrt_double(mX * mX + player.motionY * player.motionY + mZ * mZ);
-				mX /= (double)f2;
-				mZ /= (double)f2;
+				mX /= f2;
+				mZ /= f2;
 				mX += player.worldObj.rand.nextGaussian() * 0.007499999832361937D * 1.0;
 				mZ += player.worldObj.rand.nextGaussian() * 0.007499999832361937D * 1.0;
 				mX *= 5;
@@ -155,7 +150,7 @@ public class UshiBisonAbilities
 	    {
 			if(currentCooldown > 110)
 				for(EntityLivingBase e : WyHelper.getEntitiesNear(player, 1.6))
-					e.attackEntityFrom(DamageSource.causePlayerDamage((EntityPlayer) player), 6);
+					e.attackEntityFrom(DamageSource.causePlayerDamage(player), 6);
 	    }
 	}
 	
@@ -186,15 +181,15 @@ public class UshiBisonAbilities
 			if(props.getZoanPoint().equals("power"))
 			{
 				super.hitEntity(player, target);
-				target.attackEntityFrom(DamageSource.causePlayerDamage((EntityPlayer) player), 20);
+				target.attackEntityFrom(DamageSource.causePlayerDamage(player), 20);
 				WyNetworkHelper.sendToAllAround(new PacketParticles(ID.PARTICLEFX_KOKUTEICROSS, target), player.dimension, player.posX, player.posY, player.posZ, ID.GENERIC_PARTICLES_RENDER_DISTANCE);
 				
-				double mX = (double)(-MathHelper.sin(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4);
-				double mZ = (double)(MathHelper.cos(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4);
+				double mX = -MathHelper.sin(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4;
+				double mZ = MathHelper.cos(player.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(player.rotationPitch / 180.0F * (float)Math.PI) * 0.4;
 					
 				double f2 = MathHelper.sqrt_double(mX * mX + player.motionY * player.motionY + mZ * mZ);
-				mX /= (double)f2;
-				mZ /= (double)f2;
+				mX /= f2;
+				mZ /= f2;
 				mX += player.worldObj.rand.nextGaussian() * 0.007499999832361937D * 1.0;
 				mZ += player.worldObj.rand.nextGaussian() * 0.007499999832361937D * 1.0;
 				mX *= -0.7;

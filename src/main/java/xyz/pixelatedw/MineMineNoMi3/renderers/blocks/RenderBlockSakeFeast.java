@@ -1,13 +1,12 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.blocks;
 
-import org.lwjgl.opengl.GL11;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 import xyz.pixelatedw.MineMineNoMi3.ID;
 import xyz.pixelatedw.MineMineNoMi3.blocks.tileentities.TileEntitySakeFeast;
 import xyz.pixelatedw.MineMineNoMi3.models.blocks.ModelSakeBottle;
@@ -16,10 +15,12 @@ import xyz.pixelatedw.MineMineNoMi3.models.blocks.ModelSakeCup;
 @SideOnly(Side.CLIENT)
 public class RenderBlockSakeFeast extends TileEntitySpecialRenderer
 {
-	private ModelBase bottleModel, cupModel;
-	private ResourceLocation bottleTexture, cupTexture;
+	private final ModelBase bottleModel;
+	private final ModelBase cupModel;
+	private final ResourceLocation bottleTexture;
+	private final ResourceLocation cupTexture;
 
-	private double[] cupPositions = new double[]
+	private final double[] cupPositions = new double[]
 			{
 					0.06, 0, -0.4,
 					0.36, 0, -0.26,

@@ -1,12 +1,10 @@
 package xyz.pixelatedw.MineMineNoMi3.renderers.entities.mobs.humanoids;
 
-import org.lwjgl.opengl.GL11;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.EntityLivingBase;
+import org.lwjgl.opengl.GL11;
 import xyz.pixelatedw.MineMineNoMi3.data.ExtendedEntityData;
-import xyz.pixelatedw.MineMineNoMi3.entities.mobs.misc.EntityDoppelman;
 import xyz.pixelatedw.MineMineNoMi3.models.entities.mobs.humanoids.ModelMarine;
 import xyz.pixelatedw.MineMineNoMi3.renderers.entities.MobRenderer;
 
